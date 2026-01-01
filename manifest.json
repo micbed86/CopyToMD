@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Copy with Formatting (as Markdown)",
+  "description": "Copies selected rendered text as clean Markdown to the clipboard. Now with a fresh new look and settings!",
+  "version": "2.0.0",
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Copy with Formatting (as Markdown) – Settings"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "libs/turndown.js",
+        "locales.js",
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "locales.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
