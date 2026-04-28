@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Copy with Formatting (as Markdown)",
   "description": "Copies selected rendered text as clean Markdown to the clipboard. Now with a fresh new look and settings!",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "permissions": [
     "storage",
     "scripting",
@@ -22,6 +22,7 @@
       ],
       "js": [
         "libs/turndown.js",
+        "libs/turndown-plugin-gfm.js",
         "locales.js",
         "content.js"
       ],
